@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".WithFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+
+            >
+
+            <TextView
+                android:id="@+id/with_textView_id"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                android:text="TextView"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.104"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/with_profile"
+                app:layout_constraintVertical_bias="0.333" />
+
+            <ImageView
+                android:id="@+id/with_profile"
+                android:layout_width="84dp"
+                android:layout_height="89dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="30dp"
+                android:src="@mipmap/ic_launcher_round"
+                app:layout_constraintBottom_toTopOf="@+id/with_textView_id"
+                app:layout_constraintEnd_toStartOf="@+id/with_textView_km"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/with_textView_km"
+                android:layout_width="117dp"
+                android:layout_height="38dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="TextView"
+                app:layout_constraintBottom_toTopOf="@+id/with_textView_allCount"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.597"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/with_textView_allCount"
+                android:layout_width="117dp"
+                android:layout_height="35dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="112dp"
+                android:layout_marginStart="57dp"
+                android:layout_marginTop="5dp"
+                android:text="TextView"
+                app:layout_constraintBottom_toTopOf="@+id/with_textView_firstCount"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.823"
+                app:layout_constraintStart_toEndOf="@+id/with_profile"
+                app:layout_constraintTop_toBottomOf="@+id/with_textView_km"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/with_textView_firstCount"
+                android:layout_width="117dp"
+                android:layout_height="33dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginEnd="168dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="6dp"
+                android:text="TextView"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.202"
+                app:layout_constraintStart_toEndOf="@+id/with_textView_id"
+                app:layout_constraintTop_toBottomOf="@+id/with_textView_allCount" />
+
+            <Button
+                android:id="@+id/btn_createRoom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="17dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="105dp"
+                android:text="방 생성"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/with_textView_allCount"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/roomList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+
+</FrameLayout>
